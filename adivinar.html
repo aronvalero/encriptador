@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Adivinar</title>
+</head>
+<body>
+<h1>Adivinar</h1>
+<script type="text/javascript">
+	function saltarLinea(){
+		document.write("<br>");
+	}
+	function imprimir(frase){
+		document.write(frase);
+		saltarLinea();
+	}
+	var numeroIngresado=parseInt(prompt("Numero 1-10: "));
+	var numeroPensado=Math.round()*10;
+	if (numeroPensado==numeroIngresado) {
+		imprimir("Adivino");
+	} else {
+		if(numeroPensado!=numeroIngresado){
+			imprimir("Fallo");
+		}
+	}
+</script>
+</body>
+</html>

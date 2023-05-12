@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Programa 1</title>
+</head>
+<body>
+	<canvas width="600" height="400">
+		
+	</canvas>
+<script type="text/javascript">
+	var pantalla = document.querySelector('canvas');
+	//getContext= traer todo el contenido 
+	var pincel=pantalla.getContext("2d");
+	//fillRect=crear rectangulo
+	function dibujarCuadrado(x,y,color){
+	pincel.fillStyle=color
+	pincel.fillRect(x,y,50,50);
+	pincel.strokeStyle="black";
+	pincel.strokeRect(x,y,50,50);
+	
+	}
+	var i=0;
+	while(i<500){
+		dibujarCuadrado(i,0,"green");
+		i=i+50;
+	}
+	/*
+
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+    pincel.fillStyle = "lightgray";
+    pincel.fillRect(0, 0, 600, 400);
+
+    function dibujarCirculo(x, y, radio, color) {
+
+        pincel.fillStyle = color;
+        pincel.beginPath();
+        pincel.arc(x, y, radio, 0, 2*3.14);
+        pincel.fill();
+    }
+
+    dibujarCirculo(300, 220, 10, "blue");
+    dibujarCirculo(300, 200, 10, "red");
+    dibujarCirculo(300, 180, 10, "yellow");
+    dibujarCirculo(280, 200, 10, "orange");
+    dibujarCirculo(320, 200, 10, "black");
+*/
+</script>
+</body>
+</html>

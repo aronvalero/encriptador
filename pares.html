@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Adivinar</title>
+</head>
+<body>
+<h1>Adivinar</h1>
+<script type="text/javascript">
+	function saltarLinea(){
+		document.write("<br>");
+	}
+	function imprimir(frase){
+		document.write(frase);
+		saltarLinea();
+	}
+	for(var i=1;i<100;i++){
+		if (i%2==0) {
+			imprimir(i);
+		}
+	}
+</script>
+</body>
+</html>

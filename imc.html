@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>IMC</title>
+</head>
+<body>
+<h1><hr>PROGRAMA IMC</h1>
+<script type="text/javascript">
+	function saltarLinea(){
+		document.write("<br>");
+	}
+	function imprimir(frase){
+		document.write(frase);
+		saltarLinea();
+	}
+	function calcularIMC(peso, altura){
+	var imc;
+	imc=peso/(altura*altura);
+	return imc;
+	}
+	var peso=prompt("Peso: ");
+	var altura=prompt("Altura: ");
+	var imc= calcularIMC(peso,altura);
+	imprimir("El IMC es: " +imc);
+	if (imc<18.5) {
+		imprimir("Bajo Peso");
+	}else{
+		if (imc>=18.5&&imc<24.9) {
+			imprimir("Peso Normal");
+		} else {
+			if (imc>=25&&imc<29.9) {
+				imprimir("Sobrepeso");
+			} else {
+				if (imc>=30&&imc<24.9) {
+				imprimir("Obesidad Clase 1");
+			} else {
+				if (imc>=35&&imc<39.9) {
+				imprimir("Obesidad Clase 2");
+			} else {
+				if (imc>=40) {
+					imprimir("Obesidad Clase 3");
+				}
+			}
+			}
+			}
+		}
+	}
+</script>
+</body>
+</html>
